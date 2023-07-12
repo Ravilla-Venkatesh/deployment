@@ -11,7 +11,7 @@ spec:
     matchLabels:
       app: dotnetdemo
   template:
-    metadata:
+    metadata: 
       labels: 
         app: dotnetdemo
     spec:
