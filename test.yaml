@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dotnetdemo
-  namespace: ramana
+  namespace: venky
   labels:
     app: dotnetdemo
 spec:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: dotnetdemo
-        image: venkatramanareddy1097/dotnetdemo
+        image: vravilla123/dotnetdemo
         ports:
         - containerPort: 5000
