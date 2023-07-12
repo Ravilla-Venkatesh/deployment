@@ -12,7 +12,7 @@ spec:
       app: dotnetdemo
   template:
     metadata:
-      labels:
+      labels: 
         app: dotnetdemo
     spec:
       containers:
