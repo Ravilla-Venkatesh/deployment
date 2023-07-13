@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dotnetdemo
-  namespace: venky
-  labels:
-    app: dotnetdemo
+  name: dotnetdemo 
+  namespace: chow
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: dotnetdemo
   template:
-    metadata: 
-      labels: 
+    metadata:
+      labels:
         app: dotnetdemo
     spec:
       containers:
-      - name: dotnetdemo
-        image: vravilla123/dotnetdemo
-        ports:
-        - containerPort: 5000
+        - name: dotnetdemo
+          image: venkycontainer.azurecr.io/botnet-web:latest
+          ports:
+            - containerPort: 5000
+      imagePullSecrets:
+        - name: mango
