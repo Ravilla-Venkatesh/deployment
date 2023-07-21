@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnetdemo 
+  namespace: venky
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dotnetdemo
+  template:
+    metadata:
+      labels:
+        app: dotnetdemo
+    spec:
+      containers:
+        - name: dotnetdemo
+          image: kubedkr.azurecr.io/dotnet-web:latest
+          ports:
+            - containerPort: 5000
+      imagePullSecrets:
+        - name: macbook
