@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dotnetdemo-secret
+  namespace: deployment
+type: Opaque
+data:
+  SECRET_KEY: bXlzZWNyZXRwYXNzd29yZA==  # Base64-encoded "mysecretpassword"
